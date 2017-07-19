@@ -1,0 +1,6 @@
+rpi_camera: False
+camera_number: 0
+camera_width: 800
+camera_height: 480
+camera_fps: 30
+camera_id: double-vision-cam
