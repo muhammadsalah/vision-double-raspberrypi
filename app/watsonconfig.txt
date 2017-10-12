@@ -1,0 +1,1 @@
+{"organization":"l3kk7q","deviceType":"Double-Vision-Pi","deviceId":"000c29cbd633","authToken":"K25k+ue!&1bd49Xq(d","resturl":"http://double-vision-hossam.mybluemix.net/image"}

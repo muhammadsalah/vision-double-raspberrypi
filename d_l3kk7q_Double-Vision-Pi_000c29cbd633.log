@@ -1,0 +1,3 @@
+2017-10-12 11:29:17,316   ibmiotf.device.Client      WARNING Unable to encrypt messages because TLSv1.2 is unavailable (MQTT over SSL requires at least Python v2.7.9 or 3.4 and openssl v1.0.1)
+2017-10-12 11:29:19,839   ibmiotf.device.Client      CRITICAL Not authorized: s (d:l3kk7q:Double-Vision-Pi:000c29cbd633, use-token-auth, K25k+ue!&1bd49Xq(d)
+2017-10-12 11:29:29,235   ibmiotf.device.Client      CRITICAL Operation timed out connecting to the IBM Internet of Things service: l3kk7q.messaging.internetofthings.ibmcloud.com
