@@ -1,10 +1,16 @@
 import cv2
-
+# TO DO:
+#	Separate the parameters (The so called magic numbers)
+# 	to a parameter file or expose them to the user for fine
+# 	tunning purposes.
+#
 class MotionDetector:
     def __init__(self):
         self.reset()
 
     def reset(self):
+	self.min_area=500
+	self.motionsense=0
         self.firstFrame = None
         self.framesOfMotion = 0
 
@@ -31,11 +37,10 @@ class MotionDetector:
         frameMotionDetected = False
         boundingBoxes = []
         for c in cnts:
-            if cv2.contourArea(c) < 1000:
+            if cv2.contourArea(c) < self.min_area:
                 continue; # ignore small contours
 
-            # compute the bounding box for the contour, draw it on the frame,
-            # and update the text
+            # compute the bounding box for the contour
             (x, y, w, h) = cv2.boundingRect(c)
 
             # filter out small bounding boxes
@@ -49,7 +54,7 @@ class MotionDetector:
             self.framesOfMotion = 0
 
         # filter out spurious motion
-        if self.framesOfMotion > 3:
+        if self.framesOfMotion > self.motionsense:
             return True, boundingBoxes
         
         return False, None
